@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "AI Chat";
+}
+
+<h2>Chat với AI</h2>
+
+<form method="post" action="/AI/Chat">
+    <textarea name="prompt" rows="4" cols="60">@ViewBag.Prompt</textarea><br />
+    <button type="submit">Gửi</button>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <h3>Phản hồi từ AI:</h3>
+    <div style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;">
+        @ViewBag.Response
+    </div>
+}

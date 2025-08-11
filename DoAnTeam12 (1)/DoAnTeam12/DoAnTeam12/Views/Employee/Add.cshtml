@@ -1,0 +1,182 @@
+﻿@model DoAnTeam12.Models.Employee.EmployeeModel
+
+@{
+    ViewBag.Title = "Add New Employee";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f0f2f5;
+    }
+
+    .form-container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 40px;
+    }
+
+    .form-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #34495e;
+    }
+
+    .form-input,
+    .form-select {
+        padding: 12px;
+        font-size: 15px;
+        border: 1px solid #dcdfe3;
+        border-radius: 10px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        outline: none;
+    }
+
+    .error-message {
+        color: #e74c3c;
+        font-size: 13px;
+        margin-top: 4px;
+    }
+
+    .form-actions {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-save {
+        background-color: #27ae60;
+        color: #fff;
+    }
+
+    .btn-save:hover {
+        background-color: #1e8449;
+    }
+
+    .btn-cancel {
+        background-color: #95a5a6;
+        color: #fff;
+    }
+
+    .btn-cancel:hover {
+        background-color: #7f8c8d;
+    }
+
+    media (max-width: 768px) {
+        .form-container {
+            padding: 30px 20px;
+        }
+    }
+</style>
+
+<div class="form-container">
+    <div class="form-title">Add New Employee</div>
+
+    @using (Html.BeginForm("Add", "Employee", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-grid">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FullName, new { @class = "form-label" })
+                @Html.EditorFor(m => m.FullName, new { htmlAttributes = new { @class = "form-input", placeholder = "Full Name" } })
+                @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.DateOfBirth, new { @class = "form-label" })
+                @Html.EditorFor(m => m.DateOfBirth, new { htmlAttributes = new { @class = "form-input", type = "date" } })
+                @Html.ValidationMessageFor(m => m.DateOfBirth, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Gender, new { @class = "form-label" })
+                @Html.DropDownListFor(m => m.Gender, new SelectList(new[] { "Male", "Female" }), "Select Gender", new { @class = "form-select" })
+                @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.PhoneNumber, new { @class = "form-label" })
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-input", type = "tel", placeholder = "xxx xxx xxxx" })
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-input", type = "email", placeholder = "example@gmail.com" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.HireDate, new { @class = "form-label" })
+                @Html.EditorFor(m => m.HireDate, new { htmlAttributes = new { @class = "form-input", type = "date" } })
+                @Html.ValidationMessageFor(m => m.HireDate, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.DepartmentID, new { @class = "form-label" })
+                @Html.DropDownListFor(m => m.DepartmentID, (SelectList)ViewBag.departments, "Select Department", new { @class = "form-select" })
+                @Html.ValidationMessageFor(m => m.DepartmentID, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.PositionID, new { @class = "form-label" })
+                @Html.DropDownListFor(m => m.PositionID, (SelectList)ViewBag.positions, "Select Position", new { @class = "form-select" })
+                @Html.ValidationMessageFor(m => m.PositionID, "", new { @class = "error-message" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Status, new { @class = "form-label" })
+                @Html.DropDownListFor(m => m.Status, new SelectList(new[] { "Active", "Inactive" }), "Select Status", new { @class = "form-select" })
+                @Html.ValidationMessageFor(m => m.Status, "", new { @class = "error-message" })
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value="Save" class="btn btn-save" />
+            @Html.ActionLink("Cancel", "List", null, new { @class = "btn btn-cancel" })
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

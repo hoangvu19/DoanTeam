@@ -1,0 +1,220 @@
+﻿@model DoAnTeam12.Models.Payroll.PayrollModels
+
+@{
+    ViewBag.Title = "Add Payroll";
+}
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .payroll-add-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        .form-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .form-input {
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #dcdfe3;
+            border-radius: 10px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .form-input:focus {
+                border-color: #3498db;
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+                outline: none;
+            }
+
+        .validation-message {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .form-actions {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-save {
+            background-color: #27ae60;
+            color: #fff;
+        }
+
+            .btn-save:hover {
+                background-color: #1e8449;
+            }
+
+        .btn-cancel {
+            background-color: #95a5a6;
+            color: #fff;
+        }
+
+            .btn-cancel:hover {
+                background-color: #7f8c8d;
+            }
+
+        media (max-width: 768px) {
+            .payroll-add-container
+
+        {
+            padding: 30px 20px;
+        }
+
+        .form-row {
+            flex-direction: column;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="payroll-add-container">
+        <h2 class="form-title">Add Payroll</h2>
+
+        @using (Html.BeginForm("Add", "Payroll", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <!-- Row 1: Employee ID + Name -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.EmployeeID, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.EmployeeID, new { @class = "form-input", autocomplete = "off", id = "EmployeeID" })
+                    @Html.ValidationMessageFor(m => m.EmployeeID, "", new { @class = "validation-message" })
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Full Name Employee</label>
+                    <input type="text" id="EmployeeName" class="form-input" readonly />
+                </div>
+            </div>
+
+            <!-- Row 2: WorkDays, AbsentDays, LeaveDays -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.WorkDays, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.WorkDays, new { @class = "form-input", type = "number", min = "0", max = "31" })
+                    @Html.ValidationMessageFor(m => m.WorkDays, "", new { @class = "validation-message" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AbsentDays, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.AbsentDays, new { @class = "form-input", type = "number", min = "0", max = "31" })
+                    @Html.ValidationMessageFor(m => m.AbsentDays, "", new { @class = "validation-message" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.LeaveDays, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.LeaveDays, new { @class = "form-input", type = "number", min = "0", max = "31" })
+                    @Html.ValidationMessageFor(m => m.LeaveDays, "", new { @class = "validation-message" })
+                </div>
+            </div>
+
+            <!-- Row 3: AttendanceMonth & SalaryMonth -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AttendanceMonth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.AttendanceMonth, "{0:yyyy-MM}", new { @class = "form-input", type = "month" })
+                    @Html.ValidationMessageFor(m => m.AttendanceMonth, "", new { @class = "validation-message" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.SalaryMonth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.SalaryMonth, "{0:yyyy-MM}", new { @class = "form-input", type = "month" })
+                    @Html.ValidationMessageFor(m => m.SalaryMonth, "", new { @class = "validation-message" })
+                </div>
+            </div>
+
+            <!-- Row 4: BaseSalary -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BaseSalary, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.BaseSalary, new { @class = "form-input", type = "number", min = "0", step = "100000" })
+                    @Html.ValidationMessageFor(m => m.BaseSalary, "", new { @class = "validation-message" })
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-save">Add Payroll</button>
+                <a href="@Url.Action("Index", "Payroll")" class="btn btn-cancel">Cancel</a>
+            </div>
+        }
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+        }
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#EmployeeID').on('blur', function () {
+                var employeeId = $(this).val().trim();
+                if (employeeId) {
+                    $.ajax({
+                        url: '@Url.Action("GetEmployeeName", "Payroll")',
+                        type: 'GET',
+                        data: { id: employeeId },
+                        success: function (response) {
+                            if (response && response.success) {
+                                $('#EmployeeName').val(response.name);
+                            } else {
+                                $('#EmployeeName').val("Không tìm thấy");
+                            }
+                        },
+                        error: function () {
+                            $('#EmployeeName').val("Lỗi khi gọi server");
+                        }
+                    });
+                } else {
+                    $('#EmployeeName').val("");
+                }
+            });
+        });
+    </script>
+</body>

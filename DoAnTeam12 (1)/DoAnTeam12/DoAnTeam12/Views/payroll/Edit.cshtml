@@ -1,0 +1,193 @@
+﻿@model DoAnTeam12.Models.Payroll.PayrollModels
+
+@{
+    ViewBag.Title = "Update Payroll";
+}
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .form-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .form-group label {
+                font-weight: 600;
+                color: #34495e;
+                margin-bottom: 6px;
+            }
+
+        .form-control {
+            padding: 12px;
+            font-size: 15px;
+            width: 100%;
+            border: 1px solid #dcdfe3;
+            border-radius: 10px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .form-control:focus {
+                border-color: #3498db;
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+                outline: none;
+            }
+
+        .validation-message {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-success {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+            .btn-success:hover {
+                background-color: #e0a800;
+            }
+
+        .btn-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+            .btn-secondary:hover {
+                background-color: #7f8c8d;
+            }
+
+        .alert {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Update Payroll</h2>
+
+        @using (Html.BeginForm("Edit", "Payroll", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.SalaryID)
+            @Html.HiddenFor(m => m.AttendanceID)
+
+            <!-- Row 1: EmployeeID + EmployeeName -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.EmployeeID)
+                    @Html.TextBoxFor(m => m.EmployeeID, new { @class = "form-control", @readonly = "readonly" })
+                    @Html.ValidationMessageFor(m => m.EmployeeID, null, new { @class = "validation-message" })
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name Employee</label>
+                    <input type="text" id="EmployeeName" class="form-control" value="@ViewBag.EmployeeName" readonly />
+                </div>
+            </div>
+
+            <!-- Row 2: WorkDays + AbsentDays + LeaveDays -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.WorkDays)
+                    @Html.TextBoxFor(m => m.WorkDays, new { @class = "form-control", type = "number", min = "0", max = "31" })
+                    @Html.ValidationMessageFor(m => m.WorkDays, null, new { @class = "validation-message" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AbsentDays)
+                    @Html.TextBoxFor(m => m.AbsentDays, new { @class = "form-control", type = "number", min = "0", max = "31" })
+                    @Html.ValidationMessageFor(m => m.AbsentDays, null, new { @class = "validation-message" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.LeaveDays)
+                    @Html.TextBoxFor(m => m.LeaveDays, new { @class = "form-control", type = "number", min = "0", max = "31" })
+                    @Html.ValidationMessageFor(m => m.LeaveDays, null, new { @class = "validation-message" })
+                </div>
+            </div>
+
+            <!-- Row 3: AttendanceMonth + SalaryMonth -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AttendanceMonth)
+                    @Html.TextBoxFor(m => m.AttendanceMonth, "{0:yyyy-MM}", new { @class = "form-control", type = "month" })
+                    @Html.ValidationMessageFor(m => m.AttendanceMonth, null, new { @class = "validation-message" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.SalaryMonth)
+                    @Html.TextBoxFor(m => m.SalaryMonth, "{0:yyyy-MM}", new { @class = "form-control", type = "month" })
+                    @Html.ValidationMessageFor(m => m.SalaryMonth, null, new { @class = "validation-message" })
+                </div>
+            </div>
+
+            <!-- Row 4: BaseSalary -->
+            <div class="form-row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BaseSalary)
+                    @Html.TextBoxFor(m => m.BaseSalary, new { @class = "form-control", type = "number", min = "0", step = "100000" })
+                    @Html.ValidationMessageFor(m => m.BaseSalary, null, new { @class = "validation-message" })
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="submit" class="btn btn-success">Update</button>
+                <a href="@Url.Action("Index", "Payroll")" class="btn btn-secondary">Cancel</a>
+            </div>
+        }
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+    </div>
+</body>

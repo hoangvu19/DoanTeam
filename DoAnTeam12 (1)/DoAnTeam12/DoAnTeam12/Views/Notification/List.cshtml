@@ -1,0 +1,332 @@
+﻿@model List<DoAnTeam12.Models.Attendance.NotificationModel>
+@using DoAnTeam12.Models.Employee;
+@{
+    ViewBag.Title = "Important Announcements and Birthdays";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-bg: #f8f9fa;
+            --border-color: #dee2e6;
+            --text-muted: #6c757d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            min-height: 100vh;
+            align-items: flex-start;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 4000px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        #announcements-column {
+            background-color: #fff;
+            flex: 3;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 20px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        #announcements h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+        }
+
+        #report-notifications h2 {
+            color: var(--success-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        #report-notifications .notification-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+            #report-notifications .notification-item:last-child {
+                border-bottom: none;
+            }
+
+        #report-notifications .notification-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            color: var(--success-color);
+        }
+
+        #report-notifications .notification-body {
+            flex-grow: 1;
+        }
+
+        #report-notifications .notification-title {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #343a40;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            #report-notifications .notification-title a {
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+
+                #report-notifications .notification-title a:hover {
+                    text-decoration: underline;
+                    color: #0056b3;
+                }
+
+        #report-notifications .notification-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        #report-notifications .badge {
+            font-size: 0.7rem;
+            padding: 0.3em 0.6em;
+            border-radius: 0.25rem;
+            position: absolute;
+            right: -0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
+        }
+
+        #birthday-column {
+            flex: 1;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+            width: auto;
+        }
+
+        #birthday-notifications {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 15px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            font-size: 0.9rem;
+        }
+
+            #birthday-notifications h2 {
+                color: var(--info-color);
+                margin-bottom: 10px;
+                font-size: 1.15rem;
+                border-bottom: 1px solid var(--info-color);
+                padding-bottom: 5px;
+            }
+
+            #birthday-notifications .media {
+                padding: 10px 0;
+                border-bottom: 1px solid var(--border-color);
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+            }
+
+                #birthday-notifications .media:last-child {
+                    border-bottom: none;
+                }
+
+            #birthday-notifications .media-body {
+                flex-grow: 1;
+            }
+
+                #birthday-notifications .media-body h5 {
+                    font-size: 0.9rem;
+                    margin-bottom: 3px;
+                    color: #0056b3;
+                    font-weight: bold;
+                }
+
+                #birthday-notifications .media-body p {
+                    font-size: 0.8rem;
+                    color: var(--text-muted);
+                    margin-bottom: 0;
+                }
+
+            #birthday-notifications .badge {
+                font-size: 0.7rem;
+                padding: 0.3em 0.6em;
+                border-radius: 0.25rem;
+                position: absolute;
+                right: -0.75rem;
+                top: 50%;
+                transform: translateY(-50%);
+                white-space: nowrap;
+                box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
+            }
+
+        .icon {
+            font-size: 0.9rem;
+            margin-right: 5px;
+        }
+
+        .badge-info {
+            background-color: var(--info-color);
+        }
+
+        .badge-success {
+            background-color: var(--success-color);
+        }
+
+        .badge-danger {
+            background-color: var(--danger-color);
+        }
+
+        .badge-primary {
+            background-color: var(--primary-color);
+        }
+
+        .badge-warning {
+            background-color: var(--warning-color);
+            color: #212529;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div id="announcements-column">
+            <section id="announcements">
+                <h1 id="announcementsTitle">
+                    <i class="bi bi-megaphone-fill icon text-primary"></i> Important Announcements
+                </h1>
+                <div id="report-notifications">
+                    <h2>
+                        <i class="bi bi-file-earmark-text-fill icon text-success"></i> Important Reports
+                    </h2>
+                    @if (Model != null && Model.Any(m => m.Type == "Announcement"))
+                    {
+                        <ul class="list-unstyled">
+                            @foreach (var announcement in Model.Where(m => m.Type == "Announcement"))
+                            {
+                                <li class="notification-item">
+                                    <i class="bi bi-file-earmark-text-fill notification-icon"></i>
+                                    <div class="notification-body">
+                                        <h5 class="notification-title">
+                                            @if (!string.IsNullOrEmpty(announcement.Link))
+                                            {
+                                                <a href="@announcement.Link">@announcement.Title</a>
+                                            }
+                                            else
+                                            {
+                                                <span>@announcement.Title</span>
+                                            }
+                                            @if (!string.IsNullOrEmpty(announcement.BadgeText))
+                                            {
+                                                <span class="badge badge-warning">@announcement.BadgeText</span>
+                                            }
+                                        </h5>
+                                        <p class="notification-details">
+                                            <i class="bi bi-calendar-event-fill icon"></i>
+                                            @if (announcement.UpdatedDate.HasValue)
+                                            {
+                                                @announcement.UpdatedDate.Value.ToString("dd/MM/yyyy")
+                                            }
+                                            else
+                                            {
+                                                <span>Không có ngày cập nhật</span>
+                                            }
+                                            @if (!string.IsNullOrEmpty(announcement.Description))
+                                            {
+                                                <span class="ml-2"><i class="bi bi-info-circle-fill icon"></i> @announcement.Description</span>
+                                            }
+                                        </p>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No important reports.</p>
+                    }
+                </div>
+            </section>
+        </div>
+        <div id="birthday-column">
+            <section id="birthday-notifications">
+                <h2><i class="bi bi-gift-fill icon text-info"></i> Employee Birthdays</h2>
+                @if (Model != null && Model.Any(m => m.Type == "Birthday"))
+                {
+                    <ul class="list-unstyled">
+                        @foreach (var employee in Model.Where(m => m.Type == "Birthday"))
+                        {
+                            <li class="media">
+                                <div class="media-body">
+                                    <h5>@employee.FullName</h5>
+                                    <p class="mb-0 text-muted">
+                                        <i class="bi bi-calendar-heart-fill icon text-muted"></i>
+                                        Sinh nhật: @employee.DateOfBirth?.ToString("dd/MM")
+                                    </p>
+                                </div>
+                                @{
+                                    string birthdayBadgeText = "";
+                                    if (employee.DaysUntilBirthday.HasValue)
+                                    {
+                                        if (employee.DaysUntilBirthday.Value == 0)
+                                        {
+                                            birthdayBadgeText = "Hôm nay!";
+                                        }
+                                        else if (employee.DaysUntilBirthday.Value == 1)
+                                        {
+                                            birthdayBadgeText = "Ngày mai!";
+                                        }
+                                        else
+                                        {
+                                            birthdayBadgeText = $"Trong {employee.DaysUntilBirthday.Value} ngày!";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        birthdayBadgeText = "Sắp tới!";
+                                    }
+                                }
+                                <span class="badge badge-info ml-2">@birthdayBadgeText</span>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p class="text-muted">No employee birthdays.</p>
+                }
+            </section>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</body>
+</html>

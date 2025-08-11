@@ -1,0 +1,133 @@
+﻿@model List<DoAnTeam12.Models.Department.DepartmentModel>
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="departments-container">
+    <div class="departments-list-container">
+        <h2 class="departments-list-title">Departments List</h2>
+        <table class="departments-table">
+            <thead>
+                <tr>
+                    <th>Department ID</th>
+                    <th>Department</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var department in Model)
+                {
+                    <tr>
+                        <td>@department.DepartmentID</td>
+                        <td>@department.DepartmentName</td>
+                        <td>@department.CreatedAt</td>
+                        <td>@department.UpdatedAt</td>
+                        <td>
+                            <a href="@Url.Action("Details", "Department", new { id = department.DepartmentID })" class="btn btn-sm btn-primary">
+                                <i class="bi bi-eye"></i>View
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@*<div class="positions-list-container">
+            <h2 class="positions-list-title">
+                Positions List
+            </h2>
+            <table class="positions-table">
+                <thead>
+                    <tr>
+                        <th style="background-color: #008CBA; color: white;">Positions ID</th>
+                        <th style="background-color: #008CBA; color: white;">Positions</th>
+                        <th style="background-color: #008CBA; color: white;">CreatedAt</th>
+                        <th style="background-color: #008CBA; color: white;">UpdatedAt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (positions != null)
+                    {
+                        foreach (var position in positions)
+                        {
+                            <tr>
+                                <td>@position.PositionID</td>
+                                <td>@position.PositionName</td>
+                                <td>@position.createdAt</td>
+                                <td>@position.updatedAt</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">No positions available.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>*@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<style>
+    .departments-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .departments-list-container {
+        width: 90%;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .departments-list-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .departments-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+        .departments-table th,
+        .departments-table td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .departments-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .departments-table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+    .btn {
+        padding: 4px 8px;
+        font-size: 0.875rem;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+</style>

@@ -1,0 +1,588 @@
+F:\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.AssemblyReference.cache
+F:\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.CoreCompileInputs.cache
+F:\DoAnTeam12\bin\DoAnTeam12.dll.config
+F:\DoAnTeam12\bin\DoAnTeam12.dll
+F:\DoAnTeam12\bin\DoAnTeam12.pdb
+F:\DoAnTeam12\bin\roslyn\csc.exe
+F:\DoAnTeam12\bin\roslyn\csc.exe.config
+F:\DoAnTeam12\bin\roslyn\csc.rsp
+F:\DoAnTeam12\bin\roslyn\csi.exe
+F:\DoAnTeam12\bin\roslyn\csi.exe.config
+F:\DoAnTeam12\bin\roslyn\csi.rsp
+F:\DoAnTeam12\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\DoAnTeam12\bin\roslyn\Microsoft.Managed.Core.targets
+F:\DoAnTeam12\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DoAnTeam12\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\DoAnTeam12\bin\roslyn\System.AppContext.dll
+F:\DoAnTeam12\bin\roslyn\System.Collections.Immutable.dll
+F:\DoAnTeam12\bin\roslyn\System.Console.dll
+F:\DoAnTeam12\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\DoAnTeam12\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\DoAnTeam12\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\DoAnTeam12\bin\roslyn\System.Globalization.Calendars.dll
+F:\DoAnTeam12\bin\roslyn\System.IO.Compression.dll
+F:\DoAnTeam12\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\DoAnTeam12\bin\roslyn\System.IO.FileSystem.dll
+F:\DoAnTeam12\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\DoAnTeam12\bin\roslyn\System.Net.Http.dll
+F:\DoAnTeam12\bin\roslyn\System.Net.Sockets.dll
+F:\DoAnTeam12\bin\roslyn\System.Reflection.Metadata.dll
+F:\DoAnTeam12\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\DoAnTeam12\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\DoAnTeam12\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\DoAnTeam12\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\DoAnTeam12\bin\roslyn\System.ValueTuple.dll
+F:\DoAnTeam12\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\DoAnTeam12\bin\roslyn\System.Xml.XmlDocument.dll
+F:\DoAnTeam12\bin\roslyn\System.Xml.XPath.dll
+F:\DoAnTeam12\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\DoAnTeam12\bin\roslyn\vbc.exe
+F:\DoAnTeam12\bin\roslyn\vbc.exe.config
+F:\DoAnTeam12\bin\roslyn\vbc.rsp
+F:\DoAnTeam12\bin\roslyn\VBCSCompiler.exe
+F:\DoAnTeam12\bin\roslyn\VBCSCompiler.exe.config
+F:\DoAnTeam12\bin\Antlr3.Runtime.dll
+F:\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DoAnTeam12\bin\Microsoft.Web.Infrastructure.dll
+F:\DoAnTeam12\bin\Newtonsoft.Json.dll
+F:\DoAnTeam12\bin\System.Net.Http.Formatting.dll
+F:\DoAnTeam12\bin\System.Web.Helpers.dll
+F:\DoAnTeam12\bin\System.Web.Http.dll
+F:\DoAnTeam12\bin\System.Web.Http.WebHost.dll
+F:\DoAnTeam12\bin\System.Web.Mvc.dll
+F:\DoAnTeam12\bin\System.Web.Optimization.dll
+F:\DoAnTeam12\bin\System.Web.Razor.dll
+F:\DoAnTeam12\bin\System.Web.WebPages.Deployment.dll
+F:\DoAnTeam12\bin\System.Web.WebPages.dll
+F:\DoAnTeam12\bin\System.Web.WebPages.Razor.dll
+F:\DoAnTeam12\bin\WebGrease.dll
+F:\DoAnTeam12\bin\System.Web.Helpers.xml
+F:\DoAnTeam12\bin\System.Web.Mvc.xml
+F:\DoAnTeam12\bin\System.Web.Optimization.xml
+F:\DoAnTeam12\bin\System.Web.Razor.xml
+F:\DoAnTeam12\bin\System.Web.WebPages.xml
+F:\DoAnTeam12\bin\System.Web.WebPages.Deployment.xml
+F:\DoAnTeam12\bin\System.Web.WebPages.Razor.xml
+F:\DoAnTeam12\bin\Newtonsoft.Json.xml
+F:\DoAnTeam12\bin\Antlr3.Runtime.pdb
+F:\DoAnTeam12\bin\System.Net.Http.Formatting.xml
+F:\DoAnTeam12\bin\System.Web.Http.xml
+F:\DoAnTeam12\bin\System.Web.Http.WebHost.xml
+F:\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.Up2Date
+F:\DoAnTeam12\obj\Debug\DoAnTeam12.dll
+F:\DoAnTeam12\obj\Debug\DoAnTeam12.pdb
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.dll.config
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.pdb
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.exe
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.exe.config
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.rsp
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.exe
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.exe.config
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.rsp
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.AppContext.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Console.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.Compression.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Net.Http.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Net.Sockets.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.ValueTuple.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XPath.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.exe
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.exe.config
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.rsp
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\VBCSCompiler.exe
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Antlr3.Runtime.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Newtonsoft.Json.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Formatting.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Helpers.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.WebHost.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Mvc.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Optimization.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Razor.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Razor.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\WebGrease.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Helpers.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Mvc.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Optimization.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Razor.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Razor.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Newtonsoft.Json.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Antlr3.Runtime.pdb
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Formatting.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.WebHost.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.AssemblyReference.cache
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.CoreCompileInputs.cache
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.Up2Date
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.pdb
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\BouncyCastle.Cryptography.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\K4os.Hash.xxHash.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\MySql.Data.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Buffers.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.IO.Pipelines.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Memory.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Numerics.Vectors.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\ZstdSharp.dll
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\BouncyCastle.Cryptography.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.pdb
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\K4os.Hash.xxHash.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\MySql.Data.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Buffers.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.IO.Pipelines.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Memory.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Numerics.Vectors.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vupha\Downloads\DoAnTeam12\DoAnTeam12\bin\System.Threading.Tasks.Extensions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.dll.config
+F:\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.dll
+F:\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.pdb
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.exe
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.exe.config
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.rsp
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.exe
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.exe.config
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.rsp
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Managed.Core.targets
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.AppContext.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Collections.Immutable.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Console.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Globalization.Calendars.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.Compression.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.FileSystem.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Net.Http.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Net.Sockets.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Reflection.Metadata.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.ValueTuple.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XmlDocument.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XPath.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.exe
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.exe.config
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.rsp
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\VBCSCompiler.exe
+F:\DoAnTeam12\DoAnTeam12\bin\roslyn\VBCSCompiler.exe.config
+F:\DoAnTeam12\DoAnTeam12\bin\Antlr3.Runtime.dll
+F:\DoAnTeam12\DoAnTeam12\bin\BouncyCastle.Cryptography.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.dll
+F:\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.dll
+F:\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.Streams.dll
+F:\DoAnTeam12\DoAnTeam12\bin\K4os.Hash.xxHash.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Bcl.AsyncInterfaces.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Web.Infrastructure.dll
+F:\DoAnTeam12\DoAnTeam12\bin\MySql.Data.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Newtonsoft.Json.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Buffers.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Configuration.ConfigurationManager.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Diagnostics.DiagnosticSource.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.IO.Pipelines.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Memory.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Formatting.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Numerics.Vectors.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Threading.Tasks.Extensions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Helpers.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.WebHost.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Mvc.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Optimization.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Razor.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Deployment.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Razor.dll
+F:\DoAnTeam12\DoAnTeam12\bin\WebGrease.dll
+F:\DoAnTeam12\DoAnTeam12\bin\ZstdSharp.dll
+F:\DoAnTeam12\DoAnTeam12\bin\BouncyCastle.Cryptography.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.pdb
+F:\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.xml
+F:\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.xml
+F:\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.Streams.xml
+F:\DoAnTeam12\DoAnTeam12\bin\K4os.Hash.xxHash.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Bcl.AsyncInterfaces.xml
+F:\DoAnTeam12\DoAnTeam12\bin\MySql.Data.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Buffers.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Configuration.ConfigurationManager.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Diagnostics.DiagnosticSource.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.IO.Pipelines.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Memory.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Numerics.Vectors.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Threading.Tasks.Extensions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Helpers.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Mvc.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Optimization.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Razor.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Deployment.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Razor.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Newtonsoft.Json.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Antlr3.Runtime.pdb
+F:\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Formatting.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.WebHost.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.AssemblyReference.cache
+F:\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.CoreCompileInputs.cache
+F:\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.Up2Date
+F:\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.dll
+F:\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.pdb
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Features.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Http.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.Abstractions.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Options.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Primitives.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Net.Http.Headers.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Text.Encodings.Web.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.Text.Json.dll
+F:\DoAnTeam12\DoAnTeam12\bin\System.ValueTuple.dll
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Features.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Http.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.Abstractions.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Options.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Primitives.xml
+F:\DoAnTeam12\DoAnTeam12\bin\Microsoft.Net.Http.Headers.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Text.Encodings.Web.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.Text.Json.xml
+F:\DoAnTeam12\DoAnTeam12\bin\System.ValueTuple.xml
+F:\DoAnTeam12\DoAnTeam12\bin\EntityFramework.dll
+F:\DoAnTeam12\DoAnTeam12\bin\EntityFramework.SqlServer.dll
+F:\DoAnTeam12\DoAnTeam12\bin\EntityFramework.xml
+F:\DoAnTeam12\DoAnTeam12\bin\EntityFramework.SqlServer.xml
+F:\DoAnTeam12\DoAnTeam12\bin\BCrypt.Net.dll
+F:\DoAnTeam12\DoAnTeam12\bin\BCrypt.Net.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.dll.config
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\DoAnTeam12.pdb
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.exe
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.exe.config
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\csc.rsp
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.exe
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.exe.config
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\csi.rsp
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Managed.Core.targets
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.AppContext.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Collections.Immutable.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Console.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Globalization.Calendars.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.Compression.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.FileSystem.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Net.Http.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Net.Sockets.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Reflection.Metadata.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.ValueTuple.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XmlDocument.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XPath.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.exe
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.exe.config
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\vbc.rsp
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\VBCSCompiler.exe
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\roslyn\VBCSCompiler.exe.config
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Antlr3.Runtime.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\BCrypt.Net.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\BouncyCastle.Cryptography.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\EntityFramework.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\EntityFramework.SqlServer.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.Streams.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\K4os.Hash.xxHash.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Features.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Bcl.AsyncInterfaces.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Http.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Options.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Primitives.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Net.Http.Headers.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Web.Infrastructure.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MySql.Data.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Newtonsoft.Json.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Buffers.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Configuration.ConfigurationManager.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Diagnostics.DiagnosticSource.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.IO.Pipelines.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Memory.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Formatting.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Numerics.Vectors.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Text.Encodings.Web.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Text.Json.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Threading.Tasks.Extensions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.ValueTuple.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Helpers.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.WebHost.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Mvc.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Optimization.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Razor.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Deployment.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Razor.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\WebGrease.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ZstdSharp.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\BCrypt.Net.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\BouncyCastle.Cryptography.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\EntityFramework.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\EntityFramework.SqlServer.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.pdb
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Google.Protobuf.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\K4os.Compression.LZ4.Streams.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\K4os.Hash.xxHash.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Http.Features.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Bcl.AsyncInterfaces.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Http.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Logging.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Options.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Extensions.Primitives.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.Net.Http.Headers.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MySql.Data.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Buffers.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Configuration.ConfigurationManager.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Diagnostics.DiagnosticSource.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.IO.Pipelines.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Memory.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Numerics.Vectors.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Text.Encodings.Web.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Text.Json.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Threading.Tasks.Extensions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.ValueTuple.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Helpers.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Mvc.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Optimization.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Razor.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Deployment.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.WebPages.Razor.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Newtonsoft.Json.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Antlr3.Runtime.pdb
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Formatting.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Web.Http.WebHost.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.CoreCompileInputs.cache
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.pdb
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MailKit.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MimeKit.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Formats.Asn1.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MailKit.pdb
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MailKit.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MailKit.dll.config
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MimeKit.pdb
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\MimeKit.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Formats.Asn1.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\OpenAI.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.ClientModel.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Memory.Data.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\OpenAI.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.ClientModel.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Memory.Data.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Json.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.Net.Http.Json.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.Abstractions.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.Logging.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.Tokens.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.TeamFoundation.Common.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.VisualStudio.Services.Common.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.VisualStudio.Services.WebApi.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.Abstractions.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.Logging.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.IdentityModel.Tokens.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.TeamFoundation.Common.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.VisualStudio.Services.Common.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\Microsoft.VisualStudio.Services.WebApi.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\cs\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\de\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\es\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\fr\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\it\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ja\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ko\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\pl\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\pt-BR\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ru\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\tr\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\zh-Hans\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\zh-Hant\Microsoft.TeamFoundation.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\cs\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\de\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\es\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\fr\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\it\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ja\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ko\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\pl\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\pt-BR\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ru\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\tr\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\zh-Hans\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\zh-Hant\Microsoft.VisualStudio.Services.Common.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\cs\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\de\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\es\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\fr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\it\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ja\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ko\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\pl\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\pt-BR\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\ru\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\tr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\zh-Hans\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\bin\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csprojAssemblyReference.cache
+F:\DoAnNhom12\DoAnTeam12 (1)\DoAnTeam12\DoAnTeam12\obj\Debug\DoAnTeam12.csproj.CopyComplete

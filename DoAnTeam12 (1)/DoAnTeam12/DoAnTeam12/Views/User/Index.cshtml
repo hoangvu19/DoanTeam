@@ -1,0 +1,190 @@
+﻿@model DoAnTeam12.Models.User.UserModel
+@using DoAnTeam12.Models.Attendance
+@using DoAnTeam12.Models.Employee
+@using System.Globalization
+@using DoAnTeam12.DAL
+
+@{
+    ViewBag.Title = "User";
+
+    var allPayrollMonths = new DoAnTeam12.DAL.PayrollDAL().GetPayrollsList()
+                                                        .Select(p => p.SalaryMonth)
+                                                        .Distinct()
+                                                        .OrderByDescending(date => date)
+                                                        .ToList();
+
+    var availableMonths = allPayrollMonths
+                                                        .Select(date => date.ToString("MM/yyyy", CultureInfo.InvariantCulture))
+                                                        .ToList();
+
+    var selectedMonth = Request.QueryString["selectedMonth"];
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-[Inter]">
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-blue-800">@ViewBag.Title</h1>
+            <p class="text-gray-500">Human Resource Management System</p>
+        </header>
+
+        @using (Html.BeginForm("Index", "User", FormMethod.Get))
+        {
+            <div class="flex flex-col md:flex-row gap-4 mb-10 items-center">
+                @Html.TextBox("keyword", null, new { @class = "w-full md:w-96 border border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500", placeholder = "🔍 Search employee by ID...", value = Request.QueryString["keyword"] })
+
+                <select name="selectedMonth" class="w-full md:w-48 border border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">All Months</option>
+                    @foreach (var month in availableMonths)
+                    {
+                        <option value="@month" @(month == selectedMonth ? "selected" : "")>@month</option>
+                    }
+                </select>
+
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow">
+                    Search
+                </button>
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block sm:inline">@ViewBag.ErrorMessage</span>
+            </div>
+        }
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h2 class="text-lg font-semibold mb-4 text-blue-700">🔔 Notifications</h2>
+                @if (Model.Notifications != null && Model.Notifications.Any(n => n.Type != "Birthday"))
+                {
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        @foreach (var n in Model.Notifications.Where(n => n.Type != "Birthday").OrderByDescending(n => n.UpdatedDate))
+                        {
+                            <li class="border-b pb-2">
+                                @if (!string.IsNullOrEmpty(n.Link))
+                                {
+                                    <a href="@n.Link" target="_blank" class="text-blue-600 hover:underline font-medium">
+                                        @n.Title 🔗
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="font-medium">@n.Title</span>
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p class="text-gray-400">No notifications found.</p>
+                }
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition col-span-1 md:col-span-1">
+                <h2 class="text-lg font-semibold mb-4 text-green-700">👤 Employee Information</h2>
+
+                @if (Model.Employees != null && Model.Employees.Any())
+                {
+                    var employee = Model.Employees.FirstOrDefault();
+                    <div class="space-y-1 text-sm">
+                        <p><strong>ID:</strong> @employee.EmployeeID</p>
+                        <p><strong>Name:</strong> @employee.FullName</p>
+                        <p><strong>Email:</strong> @employee.Email</p>
+                        <p><strong>Phone:</strong> @employee.PhoneNumber</p>
+                        <p><strong>Department:</strong> @employee.DepartmentName</p>
+                        <p><strong>Position:</strong> @employee.PositionName</p>
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full
+                                  @(employee.Status == "Active" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-600")">
+                                @employee.Status
+                            </span>
+                        </p>
+                    </div>
+                    if (Model.Payrolls != null && Model.Payrolls.Any())
+                    {
+                        <h3 class="text-md font-semibold mt-4 mb-2 text-gray-700">Payroll Details</h3>
+                        foreach (var payroll in Model.Payrolls)
+                        {
+                            <div class="mb-2 text-sm border-t pt-2">
+                                <p><strong>Month:</strong> @payroll.SalaryMonth.ToString("MM/yyyy")</p>
+                                <p><strong>Base Salary:</strong> @payroll.BaseSalary</p>
+                                <p><strong>Bonus:</strong> @payroll.Bonus</p>
+                                <p><strong>Deductions:</strong> @payroll.Deductions</p>
+                                <p><strong>Net Salary:</strong> @payroll.NetSalary</p>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-gray-400 mt-4">No payroll data found for the selected employee(s) or month.</p>
+                    }
+                }
+                else
+                {
+                    <p class="text-gray-400">Please search for an employee.</p>
+                }
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h2 class="text-lg font-semibold mb-4 text-yellow-600">🎂 Upcoming Birthdays</h2>
+                @if (Model.Notifications != null && Model.Notifications.Any(n => n.Type == "Birthday"))
+                {
+                    <div class="space-y-4">
+                        @foreach (var birthdayNotification in Model.Notifications.Where(n => n.Type == "Birthday").OrderBy(n => n.DaysUntilBirthday))
+                        {
+                            <a href="~/Views/Auth/Index.cshtml">~/Views/Auth/Index.cshtml</a>
+                            <div class="flex items-center p-3 bg-yellow-50 rounded-lg shadow-sm border border-yellow-200">
+                                <div class="flex-shrink-0 mr-3">
+                                    <span class="text-3xl">🎉</span>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-semibold text-lg text-yellow-700">@birthdayNotification.FullName</p>
+                                    <p class="text-sm text-gray-600">
+                                        <span class="font-medium">Birthday:</span> @(birthdayNotification.DateOfBirth.HasValue ? birthdayNotification.DateOfBirth.Value.ToString("MM/dd") : "N/A")
+                                    </p>
+                                </div>
+                                <div class="flex-shrink-0 ml-auto">
+                                    @if (birthdayNotification.DaysUntilBirthday.HasValue)
+                                    {
+                                        if (birthdayNotification.DaysUntilBirthday.Value == 0)
+                                        {
+                                            <span class="bg-green-200 text-green-800 text-sm font-bold px-3 py-1 rounded-full shadow-md">Today!</span>
+                                        }
+                                        else if (birthdayNotification.DaysUntilBirthday.Value == 1)
+                                        {
+                                            <span class="bg-blue-200 text-blue-800 text-sm font-bold px-3 py-1 rounded-full shadow-md">Tomorrow!</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="bg-purple-200 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full shadow-md">In @birthdayNotification.DaysUntilBirthday.Value days</span>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-gray-400">No upcoming birthdays in the next 30 days.</p>
+                }
+            </section>
+        </div>
+    </div>
+</body>
+</html>

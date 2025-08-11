@@ -1,0 +1,116 @@
+﻿@model List<DoAnTeam12.Models.Account.UserModel>
+
+@{
+    ViewBag.Title = "User Accounts List";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 p-6 font-sans antialiased">
+
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-extrabold mb-6 text-gray-800 border-b pb-3 border-gray-300">User Accounts</h2>
+
+        @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+        {
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block sm:inline">
+                    @Html.ValidationSummary(false, "", new { @class = "text-red-700" })
+                </span>
+            </div>
+        }
+
+        <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+            <table class="min-w-full leading-normal">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">ID</th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Username</th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Email</th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Mobile</th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Empty </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Role</th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var user in Model)
+                        {
+                            <tr class="hover:bg-gray-50 transition duration-150 ease-in-out">
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@user.Id</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@user.UserName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@user.Email</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">
+                                    @(string.IsNullOrWhiteSpace(user.Mobile) ? "N/A" : user.Mobile)
+                                </td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">
+                                    <input type="checkbox" disabled @(user.IsActive ? "checked" : "") class="form-checkbox h-5 w-5 text-green-600" />
+                                </td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900 ">@user.Role.ToUpper()</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900 flex items-center space-x-2">
+                                    <a href="@Url.Action("Edit", new { id = user.Id })"
+                                       class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-150">Edit</a>
+
+                                    <button type="button" onclick="showDeleteModal('@user.Id', '@user.UserName')"
+                                            class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition ease-in-out duration-150">
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="8" class="px-6 py-5 text-center text-sm text-gray-500">No user data available.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-sm w-full p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Confirm Deletion</h2>
+            <p class="text-gray-600 mb-6">Are you sure you want to delete <span id="userNameToDelete" class="font-bold text-gray-900"></span>?</p>
+            <input type="hidden" id="userIdToDelete" />
+            <div class="flex justify-end space-x-3">
+                <button onclick="cancelDelete()" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 transition ease-in-out duration-150">Cancel</button>
+                <button onclick="proceedDelete()" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition ease-in-out duration-150">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDeleteModal(userId, userName) {
+            document.getElementById("userIdToDelete").value = userId;
+            document.getElementById("userNameToDelete").innerText = userName;
+            document.getElementById("confirmModal").classList.remove("hidden");
+        }
+
+        function cancelDelete() {
+            document.getElementById("confirmModal").classList.add("hidden");
+        }
+
+        function proceedDelete() {
+            const userId = document.getElementById("userIdToDelete").value;
+            if (userId) {
+                window.location.href = `/Auth/Delete/${userId}`;
+            }
+        }
+    </script>
+</body>
+</html>

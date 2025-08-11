@@ -1,0 +1,249 @@
+﻿@model DoAnTeam12.Models.Account.UserModel
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS từ mã sidebar của bạn */
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('/image/th.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.6); 
+            padding: 40px;
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .login-header h2 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+            position: relative; /* Added for icon positioning */
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                color: #eee;
+                font-weight: bold;
+                font-size: 1em;
+            }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+            .form-control::placeholder {
+                color: #ccc;
+            }
+
+            .form-control:focus {
+                outline: none;
+                box-shadow: 0 0 5px rgba(58, 90, 64, 0.5);
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+        .text-danger {
+            color: #e63946;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .btn-primary {
+            background-color: #3a5a40;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #588157;
+            }
+
+        .forgot-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+            .forgot-links a {
+                color: #eee;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 0.95em;
+                transition: color 0.3s ease;
+            }
+
+                .forgot-links a:hover {
+                    text-decoration: underline;
+                    color: #fff;
+                }
+
+        .separator {
+            color: #ccc;
+            margin: 0 5px;
+        }
+
+        .register-link {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+            .register-link a {
+                color: #eee;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+
+                .register-link a:hover {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+
+        .alert {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Styles for the eye icon */
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(calc(-50% + 14px));
+            cursor: pointer;
+            color: #ccc;
+            font-size: 1.1em;
+            z-index: 10;
+        }
+        #passwordInput {
+            padding-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>LOGIN HERE</h2>
+        </div>
+        <form method="post" asp-action="Login">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label asp-for="UserName">User Name</label>
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Enter your username", autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", id = "passwordInput", placeholder = "****************", autocomplete = "off" })
+                <i class="password-toggle fas fa-eye" id="passwordToggle"></i>
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <input type="checkbox" id="rememberMe" name="RememberMe" value="true">
+                        <label for="rememberMe" style="display: inline-block; margin-left: 5px; font-weight: normal; font-size: 0.9em;">Remember me</label>
+                    </div>
+                    <div class="forgot-password-link">
+                        @Html.ActionLink("Forgot password?", "ForgotPassword", "Account", null, new { style = "font-size: 0.9em;" })
+                    </div>
+                </div>
+            </div>
+            @if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+                <div class="alert @(ViewBag.IsSuccess == true ? "alert-success" : "alert-danger")">
+                    @ViewBag.Message
+                </div>
+            }
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="LOGIN" />
+            </div>
+            <div class="register-link">
+                <p>To Register New Account <a href="@Url.Action("Signup", "Account")">Click Here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordToggle = document.getElementById('passwordToggle');
+
+        passwordToggle.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            // Toggle the eye icon
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+﻿@model DoAnTeam12.Models.Payroll.PayrollModels
+
+@{
+    ViewBag.Title = "Payroll Details";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <style>
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9ecef;
+            color: #495057;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            /* Style nút Back nhỏ gọn hơn */
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #6c757d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.8em;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+            .back-button:hover {
+                background-color: #5a6268;
+                box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+            }
+
+        h2 {
+            /* Giữ nguyên hoặc điều chỉnh style tiêu đề */
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #007bff;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        /* Ẩn container cũ nếu còn */
+        .back-button-container {
+            display: none;
+        }
+
+        .payroll-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 5px solid #007bff; /* Đường viền bên trái tạo điểm nhấn */
+        }
+
+        .card-title {
+            color: #343a40;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Khoảng cách giữa icon và tiêu đề */
+        }
+
+        .detail-item {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+            gap: 10px; /* Khoảng cách giữa icon và text */
+        }
+
+            .detail-item i {
+                color: #6c757d; /* Màu xám cho icon */
+                font-size: 1em;
+                width: 20px; /* Đảm bảo kích thước icon đồng đều */
+                text-align: center;
+            }
+
+        .detail-label {
+            font-weight: bold;
+            width: 35%;
+        }
+
+        .detail-value {
+            width: 65%;
+        }
+
+        .net-salary-card {
+            background-color: #28a745;
+            color: #fff;
+            border-left-color: #1e7e34; /* Màu xanh đậm hơn cho viền */
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Roboto Mono', monospace; /* Áp dụng font Roboto Mono cho toàn bộ card */
+        }
+
+        .net-salary-label {
+            font-size: 0.9em; /* Điều chỉnh kích thước label cho phù hợp */
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em; /* Điều chỉnh khoảng cách chữ cho monospace */
+            opacity: 0.8; /* Giảm nhẹ độ đậm để số nổi bật hơn */
+        }
+
+        .net-salary-amount {
+            font-size: 1.6em; /* Điều chỉnh kích thước số tiền */
+            font-weight: bolder;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            word-break: break-word;
+            line-height: 1; /* Loại bỏ khoảng cách dòng thừa */
+        }
+
+        /* Style cho nút Back */
+        .back-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #007bff; /* Màu xanh dương chủ đạo */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1em;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+            .back-button:hover {
+                background-color: #0056b3;
+                box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+            }
+
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<div class="header-container">
+    <h2>Payroll Details</h2>
+    <a href="@Url.Action("Index", "Payroll")" class="back-button">Back</a>
+</div>
+
+<div class="payroll-card">
+    <div class="card-title">
+        <i class="fas fa-user"></i> Employee Information
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-id-card"></i>
+        <div class="detail-label">Employee ID</div>
+        <div class="detail-value">@Model.EmployeeID</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-signature"></i>
+        <div class="detail-label">Full Name</div>
+        <div class="detail-value">@Model.FullName</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-building"></i>
+        <div class="detail-label">Department</div>
+        <div class="detail-value">@Model.DepartmentName</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-briefcase"></i>
+        <div class="detail-label">Position</div>
+        <div class="detail-value">@Model.PositionName</div>
+    </div>
+</div>
+<div class="payroll-card">
+    <div class="card-title">
+        <i class="fas fa-clock"></i> Attendance
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-calendar-week"></i>
+        <div class="detail-label">Attendance Month</div>
+        <div class="detail-value">@Model.AttendanceMonth.ToString("MM/yyyy")</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-check-square"></i>
+        <div class="detail-label">Work Days</div>
+        <div class="detail-value">@Model.WorkDays</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-sun"></i>
+        <div class="detail-label">Leave Days</div>
+        <div class="detail-value">@Model.LeaveDays</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-times-circle"></i>
+        <div class="detail-label">Absent Days</div>
+        <div class="detail-value">@Model.AbsentDays</div>
+    </div>
+</div>
+<div class="payroll-card">
+    <div class="card-title">
+        <i class="fas fa-calendar-alt"></i> Payroll Information
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-calendar-week"></i>
+        <div class="detail-label">Salary Month</div>
+        <div class="detail-value">@Model.SalaryMonth.ToString("MM/yyyy")</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-coins"></i>
+        <div class="detail-label">Base Salary</div>
+        <div class="detail-value">@Model.BaseSalary.ToString("N0")</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-plus-circle"></i>
+        <div class="detail-label">Bonus</div>
+        <div class="detail-value">@Model.Bonus.ToString("N0")</div>
+    </div>
+    <div class="detail-item">
+        <i class="fas fa-minus-circle"></i>
+        <div class="detail-label">Deductions</div>
+        <div class="detail-value">@Model.Deductions.ToString("N0")</div>
+    </div>
+</div>
+
+
+
+<div class="net-salary-card">
+    <div class="net-salary-label">Net Salary</div>
+    <div class="net-salary-amount">@Model.NetSalary.ToString("N0")</div>
+</div>
+

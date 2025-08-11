@@ -1,0 +1,76 @@
+﻿@model DoAnTeam12.Models.Employee.EmployeeModel
+
+@{
+    ViewBag.Title = "Delete Employee";
+}
+
+<div class="container">
+    <h2>Delete Employee</h2>
+
+    <div class="alert alert-warning" role="alert">
+        Are you sure you want to delete employee <strong>@Model.FullName</strong>?
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Employee Information
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Employee ID</dt>
+                <dd class="col-sm-9">@Model.EmployeeID</dd>
+
+                <dt class="col-sm-3">Full Name</dt>
+                <dd class="col-sm-9">@Model.FullName</dd>
+
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9">@Model.Email</dd>
+
+                <dt class="col-sm-3">Phone Number</dt>
+                <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+                <dt class="col-sm-3">Department</dt>
+                <dd class="col-sm-9">@Model.DepartmentName</dd>
+
+                <dt class="col-sm-3">Position</dt>
+                <dd class="col-sm-9">@Model.PositionName</dd>
+            </dl>
+
+            <div class="mt-3">
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                    Delete
+                </button>
+                @Html.ActionLink("Back to List", "List", null, new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete employee <strong>@Model.FullName</strong>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    @using (Html.BeginForm("Delete", "Employee", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="EmployeeID" value="@Model.EmployeeID" />
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

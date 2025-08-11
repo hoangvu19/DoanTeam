@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Báo Quan Trọng</title>
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">*@
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* Bạn có thể tùy chỉnh các biến màu này */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-bg: #f8f9fa;
+            --border-color: #dee2e6;
+            --text-muted: #6c757d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            min-height: 100vh;
+            align-items: flex-start;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 3000px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow-x: visible;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        #announcements-column {
+            background-color: #fff;
+            flex: 3;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 20px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        #announcements {
+            border: 1px solid var(--border-color);
+            background-color: var(--light-bg);
+            border-radius: 0.5rem;
+            padding: 20px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding-left: 20px;
+        }
+
+            #announcements h1 {
+                color: var(--primary-color);
+                border-bottom: 2px solid var(--primary-color);
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                font-size: 2rem;
+            }
+
+        #report-notifications h2 {
+            color: var(--success-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        #report-notifications .media {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+            display: flex; /* Thêm display flex cho .media */
+            justify-content: space-between; /* Đẩy nội dung và span ra hai đầu */
+        }
+
+            #report-notifications .media:last-child {
+                border-bottom: none;
+            }
+
+        #report-notifications .media-body h5 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        #report-notifications .media-body p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        #report-notifications .media-body h5 a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            #report-notifications .media-body h5 a:hover {
+                text-decoration: underline;
+                color: #0056b3;
+            }
+
+        #birthday-column {
+            flex: 1;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+            width: auto;
+            margin-left: 20px;
+        }
+
+        #birthday-notifications {
+            border: 1px solid var(--border-color);
+            background-color: var(--light-bg);
+            border-radius: 0.5rem;
+            padding: 15px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            font-size: 0.9rem;
+        }
+
+            #birthday-notifications h2 {
+                color: var(--info-color);
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+                border-bottom: 1px solid var(--info-color);
+                padding-bottom: 5px;
+            }
+
+            #birthday-notifications .media {
+                padding: 10px 0;
+                border-bottom: 1px solid var(--border-color);
+                align-items: center;
+                display: flex; /* Thêm display flex cho .media trong birthday */
+                justify-content: space-between; /* Đẩy nội dung và span ra hai đầu */
+            }
+
+                #birthday-notifications .media:last-child {
+                    border-bottom: none;
+                }
+
+                #birthday-notifications .media img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+
+            #birthday-notifications .media-body {
+                flex-grow: 1; /* Cho phần thân media-body chiếm không gian còn lại */
+            }
+
+                #birthday-notifications .media-body h5 {
+                    font-size: 0.9rem;
+                    margin-bottom: 3px;
+                    color: #343a40;
+                    font-weight: bold;
+                }
+
+                #birthday-notifications .media-body p {
+                    font-size: 0.8rem;
+                    color: var(--text-muted);
+                    margin-bottom: 0;
+                }
+
+            #birthday-notifications .badge {
+                font-size: 0.6rem;
+                padding: 0.2em 0.5em;
+                margin-left: 5px;
+            }
+
+        hr.my-4 {
+            border-top: 1px solid var(--secondary-color);
+            margin-top: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .icon {
+            font-size: 1rem;
+            margin-right: 3px;
+        }
+
+        /* Thiết kế lại badge */
+        #report-notifications .media > .badge,
+        #birthday-notifications .media > .badge {
+            display: inline-block; /* Đảm bảo nó là một khối inline */
+            padding: 0.3em 0.8em; /* Tăng padding để nhìn rộng rãi hơn */
+            font-size: 0.75rem; /* Tăng nhẹ kích thước chữ */
+            font-weight: 500; /* Chữ đậm vừa phải */
+            line-height: 1;
+            color: #fff; /* Màu chữ trắng hoặc tùy chỉnh */
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem; /* Bo tròn góc mềm mại hơn */
+            margin-left: 0.5rem; /* Khoảng cách bên trái so với nội dung */
+            box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+        }
+
+        /* Màu sắc cụ thể cho từng trạng thái (bạn có thể tùy chỉnh) */
+        #report-notifications .badge-info,
+        #birthday-notifications .badge-info {
+            background-color: var(--info-color);
+        }
+
+        #report-notifications .badge-success,
+        #birthday-notifications .badge-success {
+            background-color: var(--success-color);
+        }
+
+        #report-notifications .badge-danger,
+        #birthday-notifications .badge-danger {
+            background-color: var(--danger-color);
+        }
+
+        #report-notifications .badge-primary,
+        #birthday-notifications .badge-primary {
+            background-color: var(--primary-color);
+        }
+
+        #report-notifications .badge-warning,
+        #birthday-notifications .badge-warning {
+            background-color: var(--warning-color);
+            color: #212529; /* Giữ màu chữ đen cho badge vàng */
+        }
+
+        /* Thêm một chút khoảng cách giữa badge và nội dung media-body */
+        #report-notifications .media-body,
+        #birthday-notifications .media-body {
+            flex-grow: 1;
+            margin-right: 0.5rem; /* Tạo khoảng cách bên phải cho phần nội dung */
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div id="announcements-column">
+            <section id="announcements">
+                <h1 id="announcementsTitle"><i class="bi bi-megaphone-fill icon text-primary"></i> Thông Báo Quan Trọng</h1>
+
+                <div id="report-notifications">
+                    <h2><i class="bi bi-file-earmark-text-fill icon text-success"></i> Báo Cáo Quan Trọng</h2>
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-journal-richtext icon text-dark"></i> Báo Cáo Doanh Số Quý 2 - 2025</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-clock-fill icon text-muted"></i> Đã cập nhật ngày 22 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-info ml-2">Mới</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-graph-up icon text-dark"></i> Tiến Độ Dự Án Alpha</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-clock-fill icon text-muted"></i> Cập nhật hàng tuần</p>
+                            </div>
+                            <span class="badge badge-success ml-2">Đang tiến hành</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-exclamation-triangle-fill icon text-dark"></i> Thông Báo Bảo Trì Hệ Thống</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-calendar-x-fill icon text-muted"></i> Dự kiến 26 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-danger ml-2">Quan trọng</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-envelope-fill icon text-dark"></i> Thư Mời Tham Gia Hội Thảo</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-calendar-plus-fill icon text-muted"></i> Hạn chót đăng ký: 30 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-primary ml-2">Sự kiện</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-award-fill icon text-dark"></i> Kết Quả Giải Thưởng Nhân Viên Xuất Sắc</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-star-fill icon text-muted"></i> Công bố ngày 29 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-warning ml-2">Chúc mừng</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-bullhorn-fill icon text-dark"></i> Thay Đổi Chính Sách Làm Việc Từ Xa</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-calendar-check-fill icon text-muted"></i> Có hiệu lực từ 01 tháng 05 năm 2025</p>
+                            </div>
+                            <span class="badge badge-info ml-2">Đã cập nhật</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-lightbulb-fill icon text-dark"></i> Ý Tưởng Mới Cho Dự Án Gamma</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-chat-dots-fill icon text-muted"></i> Mời đóng góp ý kiến trước 05 tháng 05 năm 2025</p>
+                            </div>
+                            <span class="badge badge-primary ml-2">Góp ý</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-shield-fill-check icon text-dark"></i> Cập Nhật Về An Ninh Mạng</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-info-circle-fill icon text-muted"></i> Vui lòng đọc và tuân thủ</p>
+                            </div>
+                            <span class="badge badge-success ml-2">Quan trọng</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-tools icon text-dark"></i> Lịch Bảo Trì Thiết Bị Văn Phòng</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-calendar-week-fill icon text-muted"></i> Tuần từ 06 đến 10 tháng 05 năm 2025</p>
+                            </div>
+                            <span class="badge badge-warning ml-2">Lưu ý</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-book-fill icon text-dark"></i> Tài Liệu Hướng Dẫn Sử Dụng Phần Mềm Mới</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-cloud-download-fill icon text-muted"></i> Đã có sẵn để tải xuống</p>
+                            </div>
+                            <span class="badge badge-info ml-2">Hướng dẫn</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-cursor-fill icon text-dark"></i> Cập Nhật Giao Diện Người Dùng</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-palette-fill icon text-muted"></i> Trải nghiệm mới từ ngày 15 tháng 05 năm 2025</p>
+                            </div>
+                            <span class="badge badge-primary ml-2">Cập nhật</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-patch-check-fill icon text-dark"></i> Bản Vá Lỗi Hệ Thống</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-bug-fill icon text-muted"></i> Đã triển khai thành công</p>
+                            </div>
+                            <span class="badge badge-success ml-2">Đã sửa</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-question-circle-fill icon text-dark"></i> Hỏi Đáp Về Chính Sách Mới</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-chat-left-dots-fill icon text-muted"></i> Thời gian giải đáp: 28 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-warning ml-2">Hỏi đáp</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-bell-fill icon text-dark"></i> Thông Báo Về Thời Hạn Nộp Báo Cáo</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-hourglass-split icon text-muted"></i> Vui lòng nộp trước ngày 30 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-danger ml-2">Hết hạn</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-cloud-upload-fill icon text-dark"></i> Nâng Cấp Hệ Thống Mới</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-gear-fill icon text-muted"></i> Bắt đầu từ 03 tháng 05 năm 2025</p>
+                            </div>
+                            <span class="badge badge-info ml-2">Nâng cấp</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-people-fill icon text-dark"></i> Buổi Họp Mặt Toàn Công Ty</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-calendar-event icon text-muted"></i> Thứ Sáu, ngày 09 tháng 05 năm 2025</p>
+                            </div>
+                            <span class="badge badge-primary ml-2">Sự kiện</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-chat-right-text-fill icon text-dark"></i> Phản Hồi Từ Khách Hàng</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-star-half icon text-muted"></i> Đã tổng hợp và phân tích</p>
+                            </div>
+                            <span class="badge badge-success ml-2">Đã xem xét</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-receipt-fill icon text-dark"></i> Hướng Dẫn Thanh Toán Mới</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-file-text-fill icon text-muted"></i> Vui lòng tham khảo tài liệu đính kèm</p>
+                            </div>
+                            <span class="badge badge-warning ml-2">Hướng dẫn</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-wifi-off icon text-dark"></i> Gián Đoạn Mạng Dự Kiến</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-clock-history icon text-muted"></i> Từ 14:00 đến 15:00 ngày 24 tháng 04 năm 2025</p>
+                            </div>
+                            <span class="badge badge-danger ml-2">Cảnh báo</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-graph-up-arrow icon text-dark"></i> Báo Cáo Tăng Trưởng Tháng 4</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-bar-chart-line icon text-muted"></i> Kết quả kinh doanh khả quan</p>
+                            </div>
+                            <span class="badge badge-success ml-2">Thành công</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-code-square icon text-dark"></i> Thông Báo Về API Mới</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-terminal-fill icon text-muted"></i> Dành cho các nhà phát triển</p>
+                            </div>
+                            <span class="badge badge-info ml-2">Thông tin</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-briefcase-fill icon text-dark"></i> Cơ Hội Tuyển Dụng Mới</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-person-plus-fill icon text-muted"></i> Vị trí Chuyên viên Marketing</p>
+                            </div>
+                            <span class="badge badge-primary ml-2">Tuyển dụng</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-flag-fill icon text-dark"></i> Kết Quả Bình Chọn Ý Tưởng</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-check-all icon text-muted"></i> Ý tưởng "Không gian xanh văn phòng" chiến thắng</p>
+                            </div>
+                            <span class="badge badge-success ml-2">Đã có kết quả</span>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1"><a href="#"><i class="bi bi-exclamation-octagon-fill icon text-dark"></i> Lưu Ý Về Quy Định An Toàn Lao Động</a></h5>
+                                <p class="mb-0 text-muted"><i class="bi bi-shield-exclamation icon text-muted"></i> Đảm bảo tuân thủ nghiêm ngặt</p>
+                            </div>
+                            <span class="badge badge-danger ml-2">Cảnh báo</span>
+                        </li>
+                    </ul>
+                    @* <p class="text-muted">Không có báo cáo quan trọng nào.</p> *@
+                </div>
+            </section>
+        </div>
+
+        <div id="birthday-column">
+            <section id="birthday-notifications">
+                <h2><i class="bi bi-cake-fill icon text-info"></i> Sinh Nhật Sắp Tới</h2>
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/FFC107/000000?Text=JD" class="rounded-circle" alt="John Doe" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">John Doe</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 25/04</p>
+                        </div>
+                        <span class="badge badge-warning ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/28A745/FFFFFF?Text=JS" class="rounded-circle" alt="Jane Smith" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Jane Smith</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 28/04</p>
+                        </div>
+                        <span class="badge badge-success ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/007BFF/FFFFFF?Text=PB" class="rounded-circle" alt="Peter Brown" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Peter Brown</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 02/05</p>
+                        </div>
+                        <span class="badge badge-primary ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/F44336/FFFFFF?Text=AL" class="rounded-circle" alt="Alice Lee" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Alice Lee</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 05/05</p>
+                        </div>
+                        <span class="badge badge-danger ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/6610F2/FFFFFF?Text=BS" class="rounded-circle" alt="Bob Stone" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Bob Stone</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 08/05</p>
+                        </div>
+                        <span class="badge badge-info ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/1E88E5/FFFFFF?Text=CD" class="rounded-circle" alt="Cindy Davis" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Cindy Davis</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 10/05</p>
+                        </div>
+                        <span class="badge badge-success ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/00BCD4/FFFFFF?Text=EW" class="rounded-circle" alt="Eric White" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Eric White</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 12/05</p>
+                        </div>
+                        <span class="badge badge-primary ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/FF9800/FFFFFF?Text=SD" class="rounded-circle" alt="Sarah Davis" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Sarah Davis</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 15/05</p>
+                        </div>
+                        <span class="badge badge-warning ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/4CAF50/FFFFFF?Text=KL" class="rounded-circle" alt="Kevin Lee" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Kevin Lee</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 18/05</p>
+                        </div>
+                        <span class="badge badge-success ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/9C27B0/FFFFFF?Text=RM" class="rounded-circle" alt="Rachel Moore" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Rachel Moore</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 20/05</p>
+                        </div>
+                        <span class="badge badge-info ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/E91E63/FFFFFF?Text=TL" class="rounded-circle" alt="Thomas Lee" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Thomas Lee</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 22/05</p>
+                        </div>
+                        <span class="badge badge-primary ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/009688/FFFFFF?Text=GW" class="rounded-circle" alt="George Wilson" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">George Wilson</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 25/05</p>
+                        </div>
+                        <span class="badge badge-success ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/795548/FFFFFF?Text=HW" class="rounded-circle" alt="Helen White" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Helen White</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 28/05</p>
+                        </div>
+                        <span class="badge badge-warning ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/3F51B5/FFFFFF?Text=JM" class="rounded-circle" alt="James Miller" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">James Miller</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 30/05</p>
+                        </div>
+                        <span class="badge badge-info ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/CDDC39/000000?Text=SW" class="rounded-circle" alt="Susan Williams" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Susan Williams</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 02/06</p>
+                        </div>
+                        <span class="badge badge-primary ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/FFEB3B/000000?Text=CM" class="rounded-circle" alt="Charles Martin" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Charles Martin</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 05/06</p>
+                        </div>
+                        <span class="badge badge-warning ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/9E9E9E/FFFFFF?Text=BM" class="rounded-circle" alt="Betty Moore" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Betty Moore</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 08/06</p>
+                        </div>
+                        <span class="badge badge-secondary ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/607D8B/FFFFFF?Text=DM" class="rounded-circle" alt="David Miller" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">David Miller</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 10/06</p>
+                        </div>
+                        <span class="badge badge-info ml-2">Sắp tới</span>
+                    </li>
+                    <li class="media">
+                        <img src="https://via.placeholder.com/30/009688/FFFFFF?Text=KW" class="rounded-circle" alt="Karen Wilson" width="30" height="30">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Karen Wilson</h5>
+                            <p class="mb-0"><i class="bi bi-calendar-event icon text-muted"></i> 12/06</p>
+                        </div>
+                        <span class="badge badge-success ml-2">Sắp tới</span>
+                    </li>
+                </ul>
+                 <p class="text-muted">Không có sinh nhật nào trong thời gian tới.</p> 
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,414 @@
+﻿@model DoAnTeam12.Models.Account.DashboardModel
+
+@{
+    ViewBag.Title = "Dashboard Payroll & Employee";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            line-height: 1.6;
+        }
+
+        .min-w-full {
+            border-collapse: collapse;
+        }
+
+            .min-w-full thead th {
+                background-color: #f3f4f6;
+                color: #4b5563;
+                font-weight: 600;
+                text-align: left;
+                padding: 12px 24px;
+                border-bottom: 2px solid #e5e7eb;
+                font-size: 0.75rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+
+            .min-w-full tbody td {
+                padding: 16px 24px;
+                border-bottom: 1px solid #e5e7eb;
+                font-size: 0.875rem;
+                color: #1f2937;
+            }
+
+            .min-w-full tbody tr:nth-child(even) {
+                background-color: #f9fafb;
+            }
+
+            .min-w-full tbody tr:hover {
+                background-color: #eff6ff;
+                transition: background-color 0.15s ease-in-out;
+            }
+
+            .min-w-full tbody tr td.flex a {
+                text-decoration: none;
+                margin-right: 10px;
+            }
+
+                .min-w-full tbody tr td.flex a:last-child {
+                    margin-right: 0;
+                }
+
+                .min-w-full tbody tr td.flex a.text-blue-600:hover {
+                    color: #2563eb;
+                    text-decoration: underline;
+                }
+
+                .min-w-full tbody tr td.flex a.text-red-600:hover {
+                    color: #dc2626;
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body class="bg-gray-100 p-6 font-sans antialiased">
+
+    <header class="mb-8 border-b pb-4 border-gray-300">
+        <h2 class="text-3xl font-extrabold text-gray-800">Dashboard Payroll & Employee</h2>
+    </header>
+
+    <section class="mb-10">
+        <h3 class="text-2xl font-bold mb-5 text-gray-700">Overview</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <li class="bg-white rounded-xl shadow-lg p-7 flex items-center space-x-5 transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                <div class="flex-shrink-0 bg-green-600 text-white p-4 rounded-full shadow-md">
+                    <i class="fas fa-users text-3xl"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-600">Total Employees</h4>
+                    <p class="text-3xl font-bold text-green-700 mt-1">@Model.TotalEmployees</p>
+                </div>
+            </li>
+            <li class="bg-white rounded-xl shadow-lg p-7 flex items-center space-x-5 transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                <div class="flex-shrink-0 bg-yellow-600 text-white p-4 rounded-full shadow-md">
+                    <i class="fas fa-money-bill-wave text-3xl"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-600">Total Net Salary</h4>
+                    <p class="text-3xl font-bold text-yellow-700 mt-1">@Model.TotalNetSalary.ToString("N0") VNĐ</p>
+                </div>
+            </li>
+            <li class="bg-white rounded-xl shadow-lg p-7 flex items-center space-x-5 transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                <div class="flex-shrink-0 bg-purple-600 text-white p-4 rounded-full shadow-md">
+                    <i class="fas fa-user-circle text-3xl"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-600">Total Accounts</h4>
+                    <p class="text-3xl font-bold text-purple-700 mt-1">@Model.TotalAccounts</p>
+                </div>
+            </li>
+            <li class="bg-white rounded-xl shadow-lg p-7 flex items-center space-x-5 transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                <div class="flex-shrink-0 bg-teal-600 text-white p-4 rounded-full shadow-md">
+                    <i class="fas fa-building text-3xl"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-600">Total Departments</h4>
+                    <p class="text-3xl font-bold text-teal-700 mt-1">@Model.TotalDepartments</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <hr class="my-10 border-gray-300" />
+
+    <section class="mb-10">
+        <div class="flex flex-wrap justify-between gap-8 px-6">
+
+            <div class="w-full md:w-5/12 bg-white rounded-xl shadow-lg p-6 h-80">
+                <h3 class="text-xl font-bold mb-4 text-gray-700">Employee Distribution by Department</h3>
+                <canvas id="employeeDepartmentChart"></canvas>
+            </div>
+
+            <div class="w-full md:w-5/12 bg-white rounded-xl shadow-lg p-6 h-80">
+                <h3 class="text-xl font-bold mb-4 text-gray-700">Monthly Average Payroll (Last 12 Months)</h3>
+                <canvas id="monthlyAveragePayrollChart"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="my-10 border-gray-300" />
+
+    <section class="mb-10">
+        <h3 class="text-2xl font-bold mb-5 text-gray-700">Employee List</h3>
+        <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+            <table class="min-w-full leading-normal">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Employee ID
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Full Name
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Date of Birth
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Gender
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Phone Number
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Email
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Hire Date
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Department
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Position
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Status
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Created At
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Updated At
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Employees != null)
+                    {
+                        foreach (var nv in Model.Employees)
+                        {
+                            <tr class="hover:bg-gray-50 transition duration-150 ease-in-out">
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.EmployeeID</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.FullName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@(nv.DateOfBirth.HasValue ? nv.DateOfBirth.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.Gender</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.PhoneNumber</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.Email</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@(nv.HireDate.HasValue ? nv.HireDate.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.DepartmentName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.PositionName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@nv.Status</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@(nv.CreatedAt.HasValue ? nv.CreatedAt.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@(nv.UpdatedAt.HasValue ? nv.UpdatedAt.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="12" class="px-6 py-5 text-center text-sm text-gray-500">No employee data available.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <hr class="my-10 border-gray-300" />
+
+    <section class="mb-10">
+        <h3 class="text-2xl font-bold mb-5 text-gray-700">Payroll List</h3>
+        <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+            <table class="min-w-full leading-normal">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Salary ID
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Employee Name
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Department
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Position
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Base Salary
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Bonus
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Deductions
+                        </th>
+                        <th class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Net Salary
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Payrolls != null)
+                    {
+                        foreach (var payroll in Model.Payrolls)
+                        {
+                            <tr class="hover:bg-gray-50 transition duration-150 ease-in-out">
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.SalaryID</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.FullName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.DepartmentName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.PositionName</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.BaseSalary.ToString("N0")</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.Bonus.ToString("N0")</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900">@payroll.Deductions.ToString("N0")</td>
+                                <td class="px-6 py-5 border-b border-gray-200 text-sm text-gray-900 font-bold text-green-700">@payroll.NetSalary.ToString("N0") VNĐ</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="px-6 py-5 text-center text-sm text-gray-500">No payroll data available.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    @section Scripts {
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            var departmentData = @Html.Raw(Json.Encode(Model.DepartmentEmployeeCounts));
+
+            var labels = departmentData.map(item => item.DepartmentName);
+            var data = departmentData.map(item => item.EmployeeCount);
+
+            var ctx = document.getElementById('employeeDepartmentChart').getContext('2d');
+
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Number of Employees',
+                        data: data,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
+                        fill: false,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        },
+                        x: {
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true
+                        },
+                        title: {
+                            display: false
+                        }
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    }
+                }
+            });
+
+            var monthlyAverageData = @Html.Raw(Json.Encode(Model.MonthlyAveragePayrolls));
+
+            var monthlyLabels = monthlyAverageData.map(item => item.MonthLabel);
+            var monthlyData = monthlyAverageData.map(item => item.AverageSalary);
+
+            var ctx2 = document.getElementById('monthlyAveragePayrollChart').getContext('2d');
+
+            var myBarChart = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: monthlyLabels,
+                    datasets: [{
+                        label: 'Average Salary',
+                        data: monthlyData,
+                        backgroundColor: [ 
+                            'rgba(255, 99, 132, 1.5)',
+                            'rgba(54, 162, 235, 1.5)',
+                            'rgba(255, 206, 86, 1.5)',
+                            'rgba(75, 192, 192, 1.5)',
+                            'rgba(153, 102, 255, 1.5)',
+                            'rgba(255, 159, 64, 1.5)',
+                            'rgba(201, 203, 207, 1.5)',
+                            'rgba(123, 104, 238, 1.5)',
+                            'rgba(0, 128, 128, 1.5)',
+                            'rgba(210, 105, 30, 1.5)',
+                            'rgba(144, 238, 144, 1.5)',
+                            'rgba(221, 160, 221, 1.5)'
+                        ],
+                        borderColor: '#fff', 
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { 
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return value.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                                }
+                            }
+                        },
+                        x: {
+                          
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top' // Common position for bar chart legends
+                        },
+                        title: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    var label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.raw !== null) {
+                                        label += context.raw.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    }
+
+
+</body>
+</html>

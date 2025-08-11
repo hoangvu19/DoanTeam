@@ -1,0 +1,172 @@
+﻿@model DoAnTeam12.Models.Account.UserModel
+@{
+    ViewBag.Title = "Sign Up";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-image: url('/image/th.jpeg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .signup-container {
+            background-color: rgba(0, 0, 0, 0.6); 
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .signup-header h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .signup-header p {
+            color: #eee;
+            font-size: 1em;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                color: #eee;
+                font-weight: bold;
+                font-size: 1em;
+            }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+            .form-control::placeholder {
+                color: #ccc;
+            }
+
+            .form-control:focus {
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 137, 123, 0.5);
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+        .text-danger {
+            color: #e57373;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .btn-success {
+            background-color: #00897b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-success:hover {
+                background-color: #00695c;
+            }
+
+        .login-link {
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #eee;
+        }
+
+            .login-link a {
+                color: #00897b;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+
+                .login-link a:hover {
+                    text-decoration: underline;
+                    color: #00695c;
+                }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-header">
+            <h1>Create Account</h1>
+            <p>It's quick and easy!</p>
+        </div>
+        @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label asp-for="UserName">Username</label>
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Enter your username", autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "example@gmail.com", autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile">Mobile Number</label>
+                @Html.TextBoxFor(m => m.Mobile, new { @class = "form-control", placeholder = "xxx xxx xxxx", autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.Mobile, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "****************", autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control" placeholder="****************" autocomplete="off" />
+                @Html.ValidationMessage("ConfirmPassword", "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Sign Up" />
+            </div>
+        }
+        <div class="login-link mt-3">
+            <p>Already have an account? @Html.ActionLink("Login", "Login")</p>
+        </div>
+    </div>
+</body>
+</html>

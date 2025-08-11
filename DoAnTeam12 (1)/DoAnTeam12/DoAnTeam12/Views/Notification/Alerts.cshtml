@@ -1,0 +1,231 @@
+﻿@model List<DoAnTeam12.Models.Attendance.NotificationModel>
+@{
+    ViewBag.Title = "Warnings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    :root {
+        --danger-color: #dc3545;
+        --border-color: #e9ecef;
+        --text-muted: #6c757d;
+        --light-bg: #f8f9fa;
+        --primary-color: #007bff;
+        --warning-color: #ffc107;
+    }
+
+    .main-content {
+        flex-grow: 1;
+        padding: 30px;
+        margin-left: 100px;
+        transition: margin-left 0.3s ease-in-out;
+    }
+
+    .sidebar:hover ~ .main-content {
+        margin-left: 250px;
+    }
+
+    .container {
+        max-width: 900px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid var(--border-color);
+        border-radius: 0.75rem;
+        padding: 30px;
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.08);
+    }
+
+    #warning-section h2 {
+        color: var(--danger-color);
+        border-bottom: 3px solid var(--danger-color);
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    #warning-section .notification-item {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        transition: background-color 0.2s ease;
+    }
+
+        #warning-section .notification-item:hover {
+            background-color: var(--light-bg);
+        }
+
+        #warning-section .notification-item:last-child {
+            border-bottom: none;
+        }
+
+    #warning-section .notification-icon {
+        font-size: 1.8rem;
+        margin-right: 20px;
+        color: var(--danger-color);
+        flex-shrink: 0;
+    }
+
+        #warning-section .notification-icon.text-warning {
+            color: var(--warning-color) !important;
+        }
+
+    #warning-section .notification-body {
+        flex-grow: 1;
+    }
+
+    #warning-section .notification-title {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        color: #343a40;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    #warning-section .notification-details {
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+            box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+        }
+
+    .alert-message {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    .alert-icon {
+        font-size: 1.2rem;
+    }
+</style>
+
+<div class="main-content">
+    <section id="warning-section" class="container">
+        <h2>
+            <i class="bi bi-exclamation-triangle"></i> Warnings
+
+          
+            <form method="post" action="@Url.Action("SendPayrollEmails", "Notification")" style="margin:0;">
+                <button type="submit" class="btn btn-primary" title="Send warning emails to employees">
+                    <i class="bi bi-envelope-fill"></i> Send email notifications
+                </button>
+            </form>
+        </h2>
+
+      
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-message" role="alert">
+                <i class="bi bi-check-circle-fill alert-icon"></i>
+                @TempData["SuccessMessage"]
+            </div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-message" role="alert">
+                <i class="bi bi-x-circle-fill alert-icon"></i>
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        
+        @if ((ViewBag.Message != null) ||
+             ((ViewBag.AnniversaryAlerts != null) && ((List<string>)ViewBag.AnniversaryAlerts).Count > 0) ||
+             ((ViewBag.LeaveAlerts != null) && ((List<string>)ViewBag.LeaveAlerts).Count > 0) ||
+             ((ViewBag.SalaryVarianceAlerts != null) && ((List<string>)ViewBag.SalaryVarianceAlerts).Count > 0))
+        {
+            <ul class="list-unstyled">
+                @if (ViewBag.Message != null)
+                {
+                    <li class="notification-item">
+                        <i class="bi bi-exclamation-circle notification-icon text-danger"></i>
+                        <div class="notification-body">
+                            <h5 class="notification-title">Error</h5>
+                            <p class="notification-details">@ViewBag.Message</p>
+                        </div>
+                    </li>
+                }
+
+                @foreach (var alert in (List<string>)ViewBag.AnniversaryAlerts ?? new List<string>())
+                {
+                    <li class="notification-item">
+                        <i class="bi bi-bell-fill notification-icon text-warning"></i>
+                        <div class="notification-body">
+                            <h5 class="notification-title">Anniversary Alert</h5>
+                            <p class="notification-details">@alert</p>
+                        </div>
+                    </li>
+                }
+
+                @foreach (var alert in (List<string>)ViewBag.LeaveAlerts ?? new List<string>())
+                {
+                    <li class="notification-item">
+                        <i class="bi bi-bell-fill notification-icon text-warning"></i>
+                        <div class="notification-body">
+                            <h5 class="notification-title">Leave Alert</h5>
+                            <p class="notification-details">@alert</p>
+                        </div>
+                    </li>
+                }
+
+                @foreach (var alert in (List<string>)ViewBag.SalaryVarianceAlerts ?? new List<string>())
+                {
+                    <li class="notification-item">
+                        <i class="bi bi-bell-fill notification-icon text-warning"></i>
+                        <div class="notification-body">
+                            <h5 class="notification-title">Salary Variance Alert</h5>
+                            <p class="notification-details">@alert</p>
+                        </div>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p class="text-muted text-center py-4">No warnings to display.</p>
+        }
+    </section>
+</div>
